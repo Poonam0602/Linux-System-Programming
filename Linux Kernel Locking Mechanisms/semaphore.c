@@ -59,7 +59,7 @@ int my_init(void)
     major = register_chrdev(0, "mydevice", &fops);
     printk ("Major number is : %d", major); 
     printk ("Module insertion is successful.....");
-    sema_init(&test_Semaphore,1);       /// Initialize the Semaphore lock dynamically at runtime
+    sem_init(&test_Semaphore,1);       /// Initialize the Semaphore lock dynamically at runtime
     return 0;
 }
 
